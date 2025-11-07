@@ -1,13 +1,21 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../core/utils/assets_manager.dart';
 import '../models/drawer_item_model.dart';
 import 'drawer_item_widget.dart';
 
-class DrawerItemListView extends StatelessWidget {
+class DrawerItemListView extends StatefulWidget {
   const DrawerItemListView({super.key});
 
-  static List<DrawerItemModel> drawerItems = [
+  @override
+  State<DrawerItemListView> createState() => _DrawerItemListViewState();
+}
+
+class _DrawerItemListViewState extends State<DrawerItemListView> {
+  int selectedIndex = 0;
+  List<DrawerItemModel> drawerItems = [
     DrawerItemModel(title: "Dashboard", imgPath: AssetsManager.category),
     DrawerItemModel(
       title: "My Transaction",
@@ -20,15 +28,28 @@ class DrawerItemListView extends StatelessWidget {
       imgPath: AssetsManager.investments,
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+    return SliverList.builder(
       itemCount: drawerItems.length,
       itemBuilder: (context, index) {
-        return DrawerItemWidget(drawerItemModel: drawerItems[index]);
+        return GestureDetector(
+          onTap: () {
+            if (selectedIndex != index) {
+              setState(() {
+                selectedIndex = index;
+                log("$selectedIndex");
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: DrawerItemWidget(
+              drawerItemModel: drawerItems[index],
+              isActive: selectedIndex == index,
+            ),
+          ),
+        );
       },
     );
   }

@@ -12,7 +12,7 @@ class InActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xffFAFAFA),
+      color: Color(0xffFFFFFF),
       elevation: 0.0,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.imgPath),
@@ -30,7 +30,7 @@ class ActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xffFAFAFA),
+      color: Color(0xffFFFFFF),
       elevation: 0.0,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.imgPath),

@@ -11,14 +11,14 @@ class CustomTextField extends StatelessWidget {
         filled: true,
         fillColor: Color(0xffFAFAFA),
         contentPadding: EdgeInsets.all(12.0),
-        border: borderDecoration(),
-        enabledBorder: borderDecoration(),
-        focusedBorder: borderDecoration(),
+        border: buildBorder(),
+        enabledBorder: buildBorder(),
+        focusedBorder: buildBorder(),
       ),
     );
   }
 
-  OutlineInputBorder borderDecoration() {
+  OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12.0),
       borderSide: BorderSide(color: Color(0xffFAFAFA)),

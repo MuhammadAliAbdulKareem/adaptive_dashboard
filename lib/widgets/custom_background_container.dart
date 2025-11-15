@@ -5,14 +5,16 @@ class CustomBackgroundContainer extends StatelessWidget {
     super.key,
     required this.child,
     this.padding,
+    this.margin,
   });
 
   final Widget child;
-  final double? padding;
+  final EdgeInsets? padding, margin;
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(padding ?? 20.0),
+      margin: margin,
+      padding: padding ?? const EdgeInsets.all(20.0),
       decoration: ShapeDecoration(
         color: const Color(0xffFFFFFF),
         shape: RoundedRectangleBorder(

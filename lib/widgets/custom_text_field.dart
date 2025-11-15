@@ -9,14 +9,16 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: Color(0xff4EB7F2),
+      cursorColor: const Color(0xff4EB7F2),
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: AppStyles.styleRegular16.copyWith(color: Color(0xffAAAAAA)),
+        labelStyle: AppStyles.styleRegular16.copyWith(
+          color: const Color(0xffAAAAAA),
+        ),
         filled: true,
-        fillColor: Color(0xffFAFAFA),
+        fillColor: const Color(0xffFAFAFA),
 
-        contentPadding: EdgeInsets.all(20.0),
+        contentPadding: const EdgeInsets.all(20.0),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),
@@ -27,7 +29,7 @@ class CustomTextField extends StatelessWidget {
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12.0),
-      borderSide: BorderSide(color: Color(0xffFAFAFA)),
+      borderSide: const BorderSide(color: Color(0xffFAFAFA)),
     );
   }
 }

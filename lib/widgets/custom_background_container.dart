@@ -14,7 +14,7 @@ class CustomBackgroundContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(padding ?? 20.0),
       decoration: ShapeDecoration(
-        color: Color(0xffFFFFFF),
+        color: const Color(0xffFFFFFF),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),

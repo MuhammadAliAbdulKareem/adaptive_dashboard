@@ -11,9 +11,11 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
+        margin: const EdgeInsets.only(right: 24.0),
         decoration: BoxDecoration(
-          color: Color(0xff4EB7F2),
-          image: DecorationImage(
+          color: const Color(0xff4EB7F2),
+          image: const DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(AssetsManager.cardBackGround),
           ),
           borderRadius: BorderRadius.circular(12.0),
@@ -22,17 +24,24 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: EdgeInsets.only(top: 16.0, left: 32, right: 43),
+              contentPadding: const EdgeInsets.only(
+                top: 16.0,
+                left: 32,
+                right: 43,
+              ),
               title: Text(
                 'Name card',
                 style: AppStyles.styleRegular16.copyWith(
-                  color: Color(0xffFFFFFF),
+                  color: const Color(0xffFFFFFF),
                 ),
               ),
-              subtitle: Text('Syah Bandi', style: AppStyles.styleMedium20),
+              subtitle: const Text(
+                'Syah Bandi',
+                style: AppStyles.styleMedium20,
+              ),
               trailing: SvgPicture.asset(AssetsManager.gallery),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 24.0),
               child: Column(
@@ -44,7 +53,7 @@ class MyCard extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
                   Text(
                     '12/20 - 124',
                     style: AppStyles.styleRegular16.copyWith(
@@ -54,7 +63,7 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 27),
+            const SizedBox(height: 27),
           ],
         ),
       ),

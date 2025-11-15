@@ -16,7 +16,7 @@ class CustomDrawer extends StatelessWidget {
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: UserInfoListTile(
               userInfoModel: UserInfoModel(
                 imgPath: AssetsManager.avatar1,
@@ -25,13 +25,13 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          SliverToBoxAdapter(child: SizedBox(height: 8.0)),
-          DrawerItemListView(),
+          const SliverToBoxAdapter(child: SizedBox(height: 8.0)),
+          const DrawerItemListView(),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox(height: 20.0)),
+                const Expanded(child: SizedBox(height: 20.0)),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     imgPath: AssetsManager.settings,
@@ -44,7 +44,7 @@ class CustomDrawer extends StatelessWidget {
                     title: "Logout Account",
                   ),
                 ),
-                SizedBox(height: 48),
+                const SizedBox(height: 48),
               ],
             ),
           ),

@@ -7,7 +7,7 @@ class QuickInvoiceForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Row(
           children: [
@@ -79,7 +79,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           elevation: 0.0,
-          backgroundColor: backGroundColor ?? Color(0xff4EB7F2),
+          backgroundColor: backGroundColor ?? const Color(0xff4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),

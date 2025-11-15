@@ -16,12 +16,12 @@ class AllExpensesItemHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CircleAvatar(
-          backgroundColor: iconBackgroundColor ?? Color(0xffFAFAFA),
+          backgroundColor: iconBackgroundColor ?? const Color(0xffFAFAFA),
           radius: 30,
           child: SvgPicture.asset(
             imgPath,
             colorFilter: ColorFilter.mode(
-              iconColor ?? Color(0xff4EB7F2),
+              iconColor ?? const Color(0xff4EB7F2),
               BlendMode.srcIn,
             ),
           ),
@@ -29,7 +29,7 @@ class AllExpensesItemHeader extends StatelessWidget {
         Icon(
           Icons.arrow_forward_ios_rounded,
           size: 18,
-          color: iconColor ?? Color(0xff064061),
+          color: iconColor ?? const Color(0xff064061),
         ),
       ],
     );

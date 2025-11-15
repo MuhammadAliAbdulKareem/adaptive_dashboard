@@ -8,7 +8,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [AllExpenses(), SizedBox(height: 24), QuickInvoice()],
     );

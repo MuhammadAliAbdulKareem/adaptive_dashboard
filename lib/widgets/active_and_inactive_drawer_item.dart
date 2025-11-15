@@ -12,7 +12,7 @@ class InActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xffFFFFFF),
+      color: const Color(0xffFFFFFF),
       elevation: 0.0,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.imgPath),
@@ -30,12 +30,12 @@ class ActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xffFFFFFF),
+      color: const Color(0xffFFFFFF),
       elevation: 0.0,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.imgPath),
         title: Text(drawerItemModel.title, style: AppStyles.styleBold16),
-        trailing: Container(color: Color(0xff4EB7F2), width: 3.27),
+        trailing: Container(color: const Color(0xff4EB7F2), width: 3.27),
       ),
     );
   }

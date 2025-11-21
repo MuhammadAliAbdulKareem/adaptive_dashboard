@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/widgets/dots_indicator.dart';
 
 import '../core/utils/app_styles.dart';
@@ -29,17 +28,14 @@ class _MyCardSectionState extends State<MyCardSection> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
-      margin: const EdgeInsets.only(top: 40.0, bottom: 32),
-      child: Column(
-        spacing: 20.0,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text('My card', style: AppStyles.styleSemiBold20),
-          MyCardPageView(pageController: pageController),
-          DotsIndicator(currentPageIndex: currentIndex),
-        ],
-      ),
+    return Column(
+      spacing: 20.0,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('My card', style: AppStyles.styleSemiBold20),
+        MyCardPageView(pageController: pageController),
+        DotsIndicator(currentPageIndex: currentIndex),
+      ],
     );
   }
 }

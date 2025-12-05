@@ -10,11 +10,10 @@ class MyCardAndTransactionHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
-      margin: EdgeInsets.only(top: 40.0, bottom: 24),
       child: Column(
         children: [
           MyCardSection(),
-          Divider(color: Color(0xffFFFFFF), height: 40.0),
+          Divider(color: Color(0xffF1F1F1), height: 40.0, thickness: 1.0),
           TransactionHistorySection(),
         ],
       ),

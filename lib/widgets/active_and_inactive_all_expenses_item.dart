@@ -25,11 +25,14 @@ class InActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(imgPath: itemModel.imgPath),
           const SizedBox(height: 34.0),
-          Text(itemModel.title, style: AppStyles.styleSemiBold16),
+          Text(itemModel.title, style: AppStyles.styleSemiBold16(context)),
           const SizedBox(height: 8.0),
-          Text(itemModel.date, style: AppStyles.styleRegular14),
+          Text(itemModel.date, style: AppStyles.styleRegular14(context)),
           const SizedBox(height: 16.0),
-          Text("\$${itemModel.amount}", style: AppStyles.styleSemiBold24),
+          Text(
+            "\$${itemModel.amount}",
+            style: AppStyles.styleSemiBold24(context),
+          ),
         ],
       ),
     );
@@ -62,23 +65,23 @@ class ActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(height: 34.0),
           Text(
             itemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(
-              color: const Color(0xffFFFFFF),
-            ),
+            style: AppStyles.styleSemiBold16(
+              context,
+            ).copyWith(color: const Color(0xffFFFFFF)),
           ),
           const SizedBox(height: 8.0),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14.copyWith(
-              color: const Color(0xffFAFAFA),
-            ),
+            style: AppStyles.styleRegular14(
+              context,
+            ).copyWith(color: const Color(0xffFAFAFA)),
           ),
           const SizedBox(height: 16.0),
           Text(
             "\$${itemModel.amount}",
-            style: AppStyles.styleSemiBold24.copyWith(
-              color: const Color(0xffFFFFFF),
-            ),
+            style: AppStyles.styleSemiBold24(
+              context,
+            ).copyWith(color: const Color(0xffFFFFFF)),
           ),
         ],
       ),

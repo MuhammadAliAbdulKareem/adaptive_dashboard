@@ -32,7 +32,7 @@ class _MyCardSectionState extends State<MyCardSection> {
       spacing: 20.0,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('My card', style: AppStyles.styleSemiBold20),
+        Text('My card', style: AppStyles.styleSemiBold20(context)),
         MyCardPageView(pageController: pageController),
         DotsIndicator(currentPageIndex: currentIndex),
       ],

@@ -17,10 +17,13 @@ class IncomeDetailsItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
         ),
       ),
-      title: Text(incomeDetailsItemModel.title, style: AppStyles.styleMedium16),
+      title: Text(
+        incomeDetailsItemModel.title,
+        style: AppStyles.styleSemiBold16(context),
+      ),
       trailing: Text(
         '${incomeDetailsItemModel.value}%',
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleSemiBold16(context),
       ),
     );
   }

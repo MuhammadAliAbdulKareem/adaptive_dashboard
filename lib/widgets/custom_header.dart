@@ -11,7 +11,7 @@ class CustomHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title, style: AppStyles.styleSemiBold20),
+        Text(title, style: AppStyles.styleSemiBold20(context)),
         const RangeOptions(),
       ],
     );

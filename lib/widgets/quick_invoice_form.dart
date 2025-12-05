@@ -87,8 +87,8 @@ class CustomButton extends StatelessWidget {
         child: Text(
           title ?? 'Send Money',
           style: titleColor != null
-              ? AppStyles.styleSemiBold18.copyWith(color: titleColor)
-              : AppStyles.styleSemiBold18,
+              ? AppStyles.styleSemiBold18(context).copyWith(color: titleColor)
+              : AppStyles.styleSemiBold18(context),
         ),
       ),
     );
